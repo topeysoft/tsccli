@@ -18,8 +18,7 @@ var doCreateProject = (name) => {
 }
 program
     .version('0.0.1')
-    .command('init [projectName]', 'Initializes a new project')
-    .command('init ', 'Initializes a new project')
+    .command('init <projectName>', 'Initializes a new project')
     .option('-v, --version', 'Outputs the version number')
     
     // .action(function (projectName) {
