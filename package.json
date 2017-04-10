@@ -1,11 +1,11 @@
 {
   "name": "@topeysoft/tsccli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Command line interface for starting and bootstraping node js application (and unit tests) with minimal effort. ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm version patch && npm publish --access=public"
+    "deploy": "npm version patch --force && npm publish --access=public"
   },
   "bin": {
     "tli": "bin/tsccli.js",
@@ -30,9 +30,11 @@
   },
   "homepage": "https://github.com/topeysoft/tsccli#readme",
   "dependencies": {
+    "@types/username": "^1.0.28",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0",
-    "shelljs": "^0.7.7"
+    "shelljs": "^0.7.7",
+    "username": "^2.3.0"
   }
 }
