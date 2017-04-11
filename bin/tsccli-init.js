@@ -34,9 +34,9 @@ var doCreateProject = (projectName, authorName) => {
         }
         shell.echo("Project config updated");
         shell.echo(`Installing dependencies...`);
-        // shell.exec(`npm install `, {
-        //     silent: true
-        // });
+        shell.exec(`npm install `, {
+            silent: true
+        });
         shell.echo(`All done!`);
         shell.echo(`Next, Run the commands "cd ${projectName} && tli serve" to get started.`);
         shell.exit(0);
