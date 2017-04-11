@@ -1,6 +1,6 @@
 {
   "name": "@topeysoft/tsccli",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Command line interface for starting and bootstraping node js application (and unit tests) with minimal effort. ",
   "main": "index.js",
   "scripts": {
