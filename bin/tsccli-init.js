@@ -26,16 +26,19 @@ var doCreateProject = (projectName, authorName) => {
     var projectJson = JSON.parse(packageJsonString);
     projectJson.name = projectName;
     projectJson.author = authorName;
-    fs.writeFile(`./package.json`, JSON.stringify(projectJson), function (err) {
+    packageJsonString = JSON.stringify(projectJson);
+    fs.writeFile(`./package.json`, packageJsonString, function (err) {
         if (err) {
             console.log(err);
             return shell.echo('Unable to update project config');
         }
         shell.echo("Project config updated");
         shell.echo(`Installing dependencies...`);
-        shell.exec(`npm install `, {
-            silent: true
-        });
+        // shell.exec(`npm install `, {
+        //     silent: true
+        // });
+        shell.echo(`All done!`);
+        shell.echo(`Next, Run the commands "cd ${projectName} && tli serve" to get started.`);
         shell.exit(0);
     });
 
