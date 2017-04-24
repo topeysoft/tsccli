@@ -11,9 +11,10 @@ if (!shell.which('git')) {
     shell.echo('Sorry, this script requires git');
     shell.exit(1);
 }
-
+var packageJsonString = shell.cat(`package.json`);
+    var projectJson = JSON.parse(packageJsonString);
 program
-    .version('0.0.1')
+    .version(projectJson.version)
     .command('init <projectName>', 'Initializes a new project')
     .command('serve <environment>', 'Starts the server')
     .option('-v, --version', 'output the version number')
